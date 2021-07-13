@@ -1,0 +1,1779 @@
+{
+    "_meta": {
+        "sources": [
+            {
+                "json": "Patrick",
+                "abbreviation": "Shaman",
+                "full": "Shaman",
+                "authors": [
+                    "Patrick Plaisted"
+                ],
+                "convertedBy": [
+                    "David Rogers"
+                ],
+                "version": "2021.07.12",
+                "url": "http://noperspopers.com"
+            }
+        ],
+        "optionalFeatureTypes": {
+            "PG": "Primal Gifts"
+        }
+    },
+    "class": [
+        {
+            "name": "Shaman",
+            "source": "Patrick",
+            "srd": false,
+            "hd": {
+                "number": 1,
+                "faces": 8
+            },
+            "proficiency": [
+                "wis",
+                "cha"
+            ],
+            "spellcastingAbility": "wis",
+            "casterProgression": "pact",
+            "cantripProgression": [
+                2,
+                2,
+                2,
+                3,
+                3,
+                3,
+                3,
+                3,
+                3,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4,
+                4
+            ],
+            "spellsKnownProgression": [
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                10,
+                11,
+                11,
+                12,
+                12,
+                13,
+                13,
+                14,
+                14,
+                15,
+                15
+            ],
+            "spellsKnownProgressionFixedByLevel": {
+                "11": {
+                    "6": 1
+                },
+                "13": {
+                    "7": 1
+                },
+                "15": {
+                    "8": 1
+                },
+                "17": {
+                    "9": 1
+                }
+            },
+            "optionalfeatureProgression": [
+                {
+                    "name": "Primal Gifts",
+                    "featureType": "PG",
+                    "progression": [
+                        0,
+                        2,
+                        2,
+                        2,
+                        3,
+                        3,
+                        4,
+                        4,
+                        5,
+                        5,
+                        5,
+                        6,
+                        6,
+                        6,
+                        7,
+                        7,
+                        7,
+                        8,
+                        8,
+                        8
+                    ]
+                }
+            ],
+            "startingProficiencies": {
+                "armor": [
+                    "light",
+                    "medium",
+                    "{@item shield|phb|shields}"
+                ],
+                "weapons": [
+                    "simple"
+                ],
+                "skills": [
+                    {
+                        "choose": {
+                            "from": [
+                                "athletics",
+                                "insight",
+                                "medicine",
+                                "nature",
+                                "perception",
+                                "stealth",
+                                "survival"
+                            ],
+                            "count": 2
+                        }
+                    }
+                ]
+            },
+            "startingEquipment": {
+                "additionalFromBackground": true,
+                "default": [
+                    "(a) a {@item shield|phb|shields} or (b) any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                    "any {@filter simple weapon|items|source=phb|category=basic|type=simple weapon}",
+                    "(a) a {@item scale mail|phb} or (b) an {@item leather armor|phb}",
+                    "(a) a {@item explorer's pack|phb} or (b) a {@item dungeoneer's pack|phb}",
+                    "{@item totem pouch|patrick}, and two {@item dagger|phb|daggers}"
+                ],
+                "goldAlternative": "{@dice 4d4 × 10|4d4 × 10|Starting Gold}",
+                "defaultData": [
+                    {
+                        "a": [
+                            "shield|phb",
+                            "crossbow bolts (20)|phb"
+                        ],
+                        "b": [
+                            {
+                                "equipmentType": "weaponSimple"
+                            }
+                        ]
+                    },
+                    {
+                        "_": [
+                            {
+                                "equipmentType": "weaponSimple"
+                            }
+                        ]
+                    },
+                    {
+                        "a": [
+                            "scale mail|phb"
+                        ],
+                        "b": [
+                            "leather armor|phb"
+                        ]
+                    },
+                    {
+                        "a": [
+                            "scholar's pack|phb"
+                        ],
+                        "b": [
+                            "dungeoneer's pack|phb"
+                        ]
+                    },
+                    {
+                        "_": [
+                            "totem pouch|Patrick",
+                            {
+                                "item": "dagger|phb",
+                                "quantity": 2
+                            }
+                        ]
+                    }
+                ]
+            },
+            "multiclassing": {
+                "requirements": {
+                    "wis": 13
+                },
+                "proficienciesGained": {
+                    "armor": [
+                        "light"
+                    ],
+                    "weapons": [
+                        "simple"
+                    ]
+                }
+            },
+            "classTableGroups": [
+                {
+                    "colLabels": [
+                        "{@filter Cantrips Known|spells|level=0|class=Shaman}",
+                        "{@filter Spells Known|spells|class=Shaman}",
+                        "Spell Slots",
+                        "Slot Level",
+                        "{@filter Gifts Known|optionalfeatures|feature type=PG}"
+                    ],
+                    "rows": [
+                        [
+                            2,
+                            2,
+                            1,
+                            "{@filter 1st|spells|level=1|class=Shaman}",
+                            0
+                        ],
+                        [
+                            2,
+                            3,
+                            2,
+                            "{@filter 1st|spells|level=1|class=Shaman}",
+                            2
+                        ],
+                        [
+                            2,
+                            4,
+                            2,
+                            "{@filter 2nd|spells|level=2|class=Shaman}",
+                            2
+                        ],
+                        [
+                            3,
+                            5,
+                            2,
+                            "{@filter 2nd|spells|level=2|class=Shaman}",
+                            2
+                        ],
+                        [
+                            3,
+                            6,
+                            2,
+                            "{@filter 3rd|spells|level=3|class=Shaman}",
+                            3
+                        ],
+                        [
+                            3,
+                            7,
+                            2,
+                            "{@filter 3rd|spells|level=3|class=Shaman}",
+                            3
+                        ],
+                        [
+                            3,
+                            8,
+                            2,
+                            "{@filter 4th|spells|level=4|class=Shaman}",
+                            4
+                        ],
+                        [
+                            3,
+                            9,
+                            2,
+                            "{@filter 4th|spells|level=4|class=Shaman}",
+                            4
+                        ],
+                        [
+                            3,
+                            10,
+                            2,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            5
+                        ],
+                        [
+                            4,
+                            10,
+                            2,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            5
+                        ],
+                        [
+                            4,
+                            11,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            5
+                        ],
+                        [
+                            4,
+                            11,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            6
+                        ],
+                        [
+                            4,
+                            12,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            6
+                        ],
+                        [
+                            4,
+                            12,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            6
+                        ],
+                        [
+                            4,
+                            13,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            7
+                        ],
+                        [
+                            4,
+                            13,
+                            3,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            7
+                        ],
+                        [
+                            4,
+                            14,
+                            4,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            7
+                        ],
+                        [
+                            4,
+                            14,
+                            4,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            8
+                        ],
+                        [
+                            4,
+                            15,
+                            4,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            8
+                        ],
+                        [
+                            4,
+                            15,
+                            4,
+                            "{@filter 5th|spells|level=5|class=Shaman}",
+                            8
+                        ]
+                    ]
+                }
+            ],
+            "classFeatures": [
+                "Elemental Totems|Shaman|Patrick|1",
+                "Elemental Magic|Shaman|Patrick|1",
+                "Primal Gifts|Shaman|Patrick|2",
+                {
+                    "classFeature": "Elemental Aspect|Shaman|Patrick|3",
+                    "gainSubclassFeature": true
+                },
+                "Ability Score Improvement|Shaman|Patrick|4",
+                "Ability Score Improvement|Shaman|Patrick|8",
+                "Elemental Focus (6th level)|Shaman|Patrick|11",
+                "Ability Score Improvement|Shaman|Patrick|12",
+                "Elemental Focus (7th level)|Shaman|Patrick|13",
+                "Elemental Focus (8th level)|Shaman|Patrick|15",
+                "Ability Score Improvement|Shaman|Patrick|16",
+                "Elemental Focus (9th level)|Shaman|Patrick|17",
+                "Ability Score Improvement|Shaman|Patrick|19",
+                "Elemental Mastery|Shaman|Patrick|20"
+            ],
+            "classSpells": [
+                {
+                    "name": "Ancestral Sight",
+                    "source": "Patrick"
+                },
+                "Druidcraft",
+                {
+                    "name": "Flame Shock",
+                    "source": "Patrick"
+                },
+                "Friendship",
+                "Guidance",
+                "Light",
+                {
+                    "name": "Lightning Jolt",
+                    "source": "Patrick"
+                },
+                "Mending",
+                "Resistance",
+                "True Strike",
+                "Comprehend Languages",
+                "Cure Wounds",
+                "Detect Magic",
+                {
+                    "name": "Earth Shock",
+                    "source": "Patrick"
+                },
+                {
+                    "name": "Earth Shield",
+                    "source": "Patrick"
+                },
+                "Fog Cloud",
+                "Hellish Rebuke",
+                "Hex",
+                "Unseen Servant",
+                "Thunderwave",
+                "Darkness",
+                "Enhance Ability",
+                {
+                    "name": "Lava Burst",
+                    "source": "Patrick"
+                },
+                {
+                    "name": "Lesser Restoration",
+                    "source": "Patrick"
+                },
+                "Misty Step",
+                {
+                    "name": "Riptide",
+                    "source": "Patrick"
+                },
+                "Shatter",
+                "Spider Climb",
+                "Spike Growth",
+                "Daylight",
+                "Dispel Magic",
+                {
+                    "name": "Chain Heal",
+                    "source": "Patrick"
+                },
+                {
+                    "name": "Chain Lightning",
+                    "source": "Patrick"
+                },
+                {
+                    "name": "Purge",
+                    "source": "Patrick"
+                },
+                "Protection from Energy",
+                "Tongues",
+                "Water Walk",
+                {
+                    "name": "Earthquake",
+                    "source": "Patrick"
+                },
+                {
+                    "name": "Ice Fury",
+                    "source": "Patrick"
+                }
+            ],
+            "subclassTitle": "Elemental Aspect",
+            "fluff": [
+                {
+                    "name": "Shaman",
+                    "type": "section",
+                    "entries": [
+                        "Shaman are mortal mediators between the very elements themselves. Often spiritual guides of their communities, these powerful practitioners commune with the ancestors and seek to balance the raging elemental forces, and can call upon them in battle to scorch and blast their enemies, or to strengthen and heal their allies. Shaman can enhance their weapons with elemental effects, smite enemies with lightning strikes and bursts of lava, and summon powerful elementals to their aid. \"Know this: a shaman must never demand power; to do so would arouse the anger of the elements, and a shaman without the elements' protection is nothing. Those that follow the path of the shaman must never forget this most vital tenet. However, a shaman that works in a respectful union with the elements wields a power rivaled by few.\" — Teo Hammerstorm",
+                        {
+                            "type": "entries",
+                            "name": "Creating a Shaman",
+                            "entries": [
+                                "",
+                                {
+                                    "type": "entries",
+                                    "name": "Quick Build",
+                                    "entries": [
+                                        "You can make a shaman quickly by following these suggestions. First, Wisdom should be your highest ability score, followed by Constitution. Second, choose the {@background outlander} background."
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "page": 1,
+                    "source": "Patrick"
+                }
+            ]
+        }
+    ],
+    "classFeature": [
+        {
+            "name": "Elemental Totems",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 1,
+            "entries": [
+                "At 1st level, you gain the ability to craft totems and embue them with elemental energy. Chose one element -- Earth, Fire, Wind, Water, to be able to craft totems of that type. It takes 1 week to craft a new totem and embue it with power. Once per short rest, you may call on the power of your totems to summon one totem you have learned. You learn more elements and gain more uses as you gain levels. You learn a new element and gain one extra use per short rest at levels 6, 10, and 14."
+            ]
+        },
+        {
+            "name": "Elemental Magic",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 1,
+            "entries": [
+                "The favor of the Elements has given you the ability to cast spells. See {@book chapter 10|PHB|10} for the general rules of spellcasting. {@filter Shaman spell list|spells|class=shaman}.",
+                {
+                    "type": "entries",
+                    "name": "Cantrips",
+                    "entries": [
+                        "You know two cantrips of your choice from the shaman spell list. You learn additional shaman cantrips of your choice at higher levels, as shown in the Cantrips Known column of the shaman table."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Spell Slots",
+                    "entries": [
+                        "The Shaman table shows how many spell slots you have to cast your {@filter shaman spells|spells|class=shaman} of 1st through 5th level. The table also shows what the level of those slots is; all of your spell slots are the same level. To cast one of your shaman spells of 1st level or higher, you must expend a spell slot. You regain all expended spell slots when you finish a short or long rest.",
+                        "For example, when you are 5th level, you have two 3rd-level spell slots. To cast a 1st-level spell, you must spend one of those slots, and you cast it as a 3rd-level spell."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Spells Known of 1st Level and Higher",
+                    "entries": [
+                        "At 1st level, you know two 1st-level spells of your choice from the shaman spell list.",
+                        "The Spells Known column of the shaman table shows when you learn more shaman spells of your choice of 1st level and higher. A spell you choose must be of a level no higher than what's shown in the table's Slot Level column for your level. When you reach 6th level, for example, you learn a new shaman spell, which can be 1st, 2nd, or 3rd level.",
+                        "Additionally, when you gain a level in this class, you can choose one of the shaman spells you know and replace it with another spell from the shaman spell list, which also must be of a level for which you have spell slots."
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Spellcasting Ability",
+                    "entries": [
+                        "Wisdom is your spellcasting ability for your shaman spells, so you use your Wisdom whenever a spell refers to your spellcasting ability. In addition, you use your Wisdom modifier when setting the saving throw DC for a shaman spell you cast and when making an attack roll with one.",
+                        {
+                            "type": "abilityDc",
+                            "name": "Spell",
+                            "attributes": [
+                                "wis"
+                            ]
+                        },
+                        {
+                            "type": "abilityAttackMod",
+                            "name": "Spell",
+                            "attributes": [
+                                "wis"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "entries",
+                    "name": "Spellcasting Focus",
+                    "entries": [
+                        "You can use an {@item elemental totem|patrick} as a spellcasting focus for your shaman spells."
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Primal Gifts",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 2,
+            "entries": [
+                "In your meditations on the elements, you have been granted primal gifts, fragments of the Elemental Lords' power that imbue you with magical ability.",
+                "At 2nd level, you gain two primal gifts of your choice. Your gift options are detailed at the end of the class description. {@filter Optional Features|optionalfeatures|Feature Type=PG} page. When you gain certain shaman levels, you gain additional gifts of your choice, as shown Gifts Known collumn of the shaman table.",
+                "Additionally, when you gain a level in this class, you can choose one of the gifts you know and replace it with another gift that you could learn at that level.",
+                "If a primal gift has prerequisites, you must meet them to learn it. You can learn the gift at the same time that you meet its prerequisites. A level prerequisite refers to your level in this class."
+            ]
+        },
+        {
+            "name": "Elemental Aspect",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 3,
+            "entries": [
+                "At 3rd level, your attunement with the elements grants you greater power."
+            ]
+        },
+        {
+            "name": "Ability Score Improvement",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 4,
+            "entries": [
+                "When you reach 4th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+            ]
+        },
+        {
+            "name": "Elemental Totems",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 6,
+            "entries": [
+                "At 6th level, you gain a new element and gain an additional use of Elemental Totems per short rest. (Earth: Stone Skin, Fire: Wrath, Wind: Grounding, Water: Elemental Resistance)"
+            ]
+        },
+        {
+            "name": "Ability Score Improvement",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 8,
+            "entries": [
+                "When you reach 8th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+            ]
+        },
+        {
+            "name": "Elemental Totems",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 10,
+            "entries": [
+                "At 10th level, you gain a new element and gain an additional use of Elemental Totems per short rest. (Earth: Stone Bulwark, Fire: Fire Elemental, Wind: Stormlash, Water: Spirit Link)"
+            ]
+        },
+        {
+            "name": "Elemental Focus (6th level)",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 11,
+            "entries": [
+                "At 11th level, your connection to the elements deepens still. Choose one {@filter 6th-level spell from the shaman spell list|spells|level=6|class=Shaman}.",
+                "You may cast this spell once without expending a spell slot. You must finish a long rest before you can do so again.",
+                "At higher levels, you gain more spells of your choice that can be cast in this way: one 7th-level spell at 13th level, one 8th-level spell at 15th level, and one 9th-level spell at 17th level. You regain all uses of these spells when you finish a long rest."
+            ]
+        },
+        {
+            "name": "Ability Score Improvement",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 12,
+            "entries": [
+                "When you reach 12th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+            ]
+        },
+        {
+            "name": "Elemental Focus (7th level)",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 13,
+            "entries": [
+                "At 13th level, your connection to the elements deepens still. Choose one {@filter 7th-level spell from the shaman spell list|spells|level=7|class=Shaman}.",
+                "You can cast this spell once without expending a spell slot. You must finish a long rest before you can do so again."
+            ]
+        },
+        {
+            "name": "Elemental Totems",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 14,
+            "entries": [
+                "At 10th level, you gain a new element and gain an additional use of Elemental Totems per short rest. (Earth: Stone Bulwark, Fire: Fire Elemental, Wind: Stormlash, Water: Spirit Link)"
+            ]
+        },
+        {
+            "name": "Elemental Focus (8th level)",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 15,
+            "entries": [
+                "At 15th level, your connection to the elements deepens still. Choose one {@filter 8th-level spell from the shaman spell list|spells|level=8|class=Shaman}.",
+                "You can cast this spell once without expending a spell slot. You must finish a long rest before you can do so again."
+            ]
+        },
+        {
+            "name": "Ability Score Improvement",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 16,
+            "entries": [
+                "When you reach 16th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+            ]
+        },
+        {
+            "name": "Elemental Focus (9th level)",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 17,
+            "entries": [
+                "At 17th level, your connection to the elements deepens still. Choose one {@filter 9th-level spell from the shaman spell list|spells|level=9|class=Shaman}.",
+                "You can cast this spell once without expending a spell slot. You must finish a long rest before you can do so again."
+            ]
+        },
+        {
+            "name": "Ability Score Improvement",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 19,
+            "entries": [
+                "When you reach 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.",
+                "If your DM allows the use of feats, you may instead take a {@5etools feat|feats.html}."
+            ]
+        },
+        {
+            "name": "Elemental Mastery",
+            "source": "Patrick",
+            "srd": false,
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "level": 20,
+            "entries": [
+                "At 20th level, you can draw on your inner reserve of mystical power while entreating your patron to regain expended spell slots. You can spend 1 minute entreating your patron for aid to regain all your expended spell slots from your Pact Magic feature. Once you regain spell slots with this feature, you must finish a long rest before you can do so again."
+            ]
+        }
+    ],
+    "subclassFeature": [
+        {
+            "name": "Aspect of Enhancement",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassShortName": "Enhancement",
+            "subclassSource": "Patrick",
+            "level": 3,
+            "entries": [
+                "You learn how to empower your weapons with elemental energy. You may empower any weapon you wish. You gain proficiency with it while you wield it and it counts as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. While empowered your weapon does extra fire damage equal to your wisdom modifier. It takes 1 hour to empower a new weapon and it remains empowered until you choose to break your bond with it or it gets destroyed."
+            ]
+        },
+        {
+            "name": "Aspect of Storms",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassShortName": "Storms",
+            "subclassSource": "Patrick",
+            "level": 3,
+            "entries": [
+                "You learn the cantrip {@spell lightning jolt|Patrick}. Further when you cast lightning jolt and roll a 17+ on the attack you may cast lightning jolt again though one die step lower. I.e. d8 to d6, 2d8 to 1d8, etc."
+            ]
+        },
+        {
+            "name": "Aspect of Restoration",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassShortName": "Restoration",
+            "subclassSource": "Patrick",
+            "level": 3,
+            "entries": [
+                "You may cast Healing Surge twice per short rest without expending a spell slot. Additionally when you heal an ally they gain temporary hit points equal to your Wisdom Modifier."
+            ]
+        }
+    ],
+    "subclass": [
+        {
+            "name": "Aspect of Enhancement",
+            "shortName": "Enhancement",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassFeatures": [
+                "Aspect of Enhancement|Shaman|Patrick|Enhancement|Patrick|3"
+            ]
+        },
+        {
+            "name": "Aspect of Storms",
+            "shortName": "Storms",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassFeatures": [
+                "Aspect of Storms|Shaman|Patrick|Storms|Patrick|3"
+            ]
+        },
+        {
+            "name": "Aspect of Restoration",
+            "shortName": "Restoration",
+            "source": "Patrick",
+            "className": "Shaman",
+            "classSource": "Patrick",
+            "subclassFeatures": [
+                "Aspect of Restoration|Shaman|Patrick|Restoration|Patrick|3"
+            ]
+        }
+    ],
+    "optionalfeature": [
+        {
+            "name": "Primal Blast",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "spell": [
+                        "lightning jolt|Patrick#c"
+                    ]
+                }
+            ],
+            "entries": [
+                "When you cast {@spell lightning jolt|Patrick}, add your Wisdom modifier to the damage it deals on a hit."
+            ]
+        },
+        {
+            "name": "Windfury",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "You can attack with your elemental weapon twice, instead of once, whenever you take the attack action on your turn. Further you may use a bonus action to attack once with disadvantage and you may take a second reaction on your turn though only once per triggering event."
+            ]
+        },
+        {
+            "name": "Earth Shield",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "You can cast Earth Shield at will, without expending a spell slot or material components."
+            ]
+        },
+        {
+            "name": "Lightning Shield",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "As an action you can surround yourself with crackeling lightning at will. The lightning shield lasts for 1 minute and deals {@damage 1d4} damage to an attacker whether they hit or miss.  This damage increases by {@damage 1d4} for each spell slot level you have above 1st."
+            ]
+        },
+        {
+            "name": "Lava Lash",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "When you attack with your empowered weapon and roll the maximum value for damage, you may roll damage again and add it to the roll."
+            ]
+        },
+        {
+            "name": "Elemental Overload",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "Your aspect of storms ability now also affects {@spell lava burst|Patrick}, {@spell ice fury|Patrick}, and {@spell chain lightning|Patrick}."
+            ]
+        },
+        {
+            "name": "Ice Fury",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "You may cast {@spell ice fury|Patrick} once without using a spell slot. This ability recharges after a short rest."
+            ]
+        },
+        {
+            "name": "Master of the Elements",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "level": 14
+                }
+            ],
+            "entries": [
+                "When you cast a damaging spell, you may add your wisdom modifier to the damage it does once for every 2 damage dice (minimum once)."
+            ]
+        },
+        {
+            "name": "Nature's Guardian",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "When an attack reduces you below half health, you gain resistance to all damage until your next turn. This ability may be used once per short rest."
+            ]
+        },
+        {
+            "name": "Deluge",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "Your healing abilities heal an additional amount equal to your proficiency bonus if your target is under the effects of {@spell riptide|Patrick}."
+            ]
+        },
+        {
+            "name": "Blood Lust",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "level": 7
+                }
+            ],
+            "entries": [
+                "Once per long rest as a bonus action you may infuse those around you with the limitless power of the elements. For 3 rounds allies within 30ft of you gain:",
+                "-You gain temporary hit points equal to half your maximum value. These hit points fade when the bloodlust ends.",
+                "-When you take an attack action you may make an additional attack.",
+                "-Spells at least 1 level below your highest level don't consume spell slots to cast"
+            ]
+        },
+        {
+            "name": "Stormkeeper",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "spell": [
+                        "lightning jolt|Patrick#c"
+                    ]
+                }
+            ],
+            "entries": [
+                "Once per long rest, you may cast {@spell lightning jolt|Patrick} 3 times as an action.  These lightning jolts may benefit from Aspect of Storms."
+            ]
+        },
+        {
+            "name": "Totem Keeper",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "level": 3
+                }
+            ],
+            "entries": [
+                "Increases the duration of all totems by 1 round and grants 1 additional usage of Elemental Totem per day."
+            ]
+        },
+        {
+            "name": "Reincarnation",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "level": 15
+                }
+            ],
+            "entries": [
+                "Once per month when you are killed you may instead return to life stable, but with 0 health and no spell slots."
+            ]
+        },
+        {
+            "name": "Ghost Wolf",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "spell": [
+                        "lightning jolt|Patrick#c"
+                    ]
+                }
+            ],
+            "entries": [
+                "As a bonus action may transform into a spirit wolf. While in this form your base speed increases to 40 ft, you gain advantage on dexterity saving throws, you ignore natural difficult terrain, and you gain a bite attack that does {@damage 1d8} damage. You may not speak, or cast spells. If you fall unconcious in this form, you revert to normal."
+            ]
+        },
+        {
+            "name": "Traveling Storms",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "spell": [
+                        "lightning jolt|Patrick#c"
+                    ]
+                }
+            ],
+            "entries": [
+                "You may cast {@spell thunderwave} once without expending a spell slot. You may cast Thunderwave with a range of 30ft."
+            ]
+        },
+        {
+            "name": "Cleansing Waters",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "Your healing spells critically heal on a 19-20."
+            ]
+        },
+        {
+            "name": "Static Discharge",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "prerequisite": [
+                {
+                    "optionalFeature": [
+                        "lightning shield|Patrick"
+                    ]
+                }
+            ],
+            "entries": [
+                "As a reaction, you can have your {@optionalFeature lightning shield|Patrick} deal its damage to one target within 5ft of you."
+            ]
+        }
+    ],
+    "spell": [
+        {
+            "name": "Ancestral Sight",
+            "source": "Patrick",
+            "srd": false,
+            "level": 0,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Flame Shock",
+            "source": "Patrick",
+            "srd": false,
+            "level": 0,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Lightning Jolt",
+            "source": "Patrick",
+            "srd": false,
+            "level": 0,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Earth Shock",
+            "source": "Patrick",
+            "srd": false,
+            "level": 1,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Earth Shield",
+            "source": "Patrick",
+            "srd": false,
+            "level": 1,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Lava Burst",
+            "source": "Patrick",
+            "srd": false,
+            "level": 2,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Ice Fury",
+            "source": "Patrick",
+            "srd": false,
+            "level": 4,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Chain Heal",
+            "source": "Patrick",
+            "srd": false,
+            "level": 3,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Chain Lightning",
+            "source": "Patrick",
+            "srd": false,
+            "level": 3,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Purge",
+            "source": "Patrick",
+            "srd": false,
+            "level": 0,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Riptide",
+            "source": "Patrick",
+            "srd": false,
+            "level": 2,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        },
+        {
+            "name": "Earthquake",
+            "source": "Patrick",
+            "srd": false,
+            "level": 4,
+            "school": "C",
+            "time": [
+                {
+                    "number": 1,
+                    "unit": "action"
+                }
+            ],
+            "range": {
+                "type": "point",
+                "distance": {
+                    "type": "feet",
+                    "amount": 60
+                }
+            },
+            "components": {
+                "v": true,
+                "s": true
+            },
+            "duration": [
+                {
+                    "type": "instant"
+                }
+            ],
+            "entries": [
+                "Beep.",
+                "Boop."
+            ],
+            "scalingLevelDice": {
+                "label": "lightning damage",
+                "scaling": {
+                    "1": "1d6",
+                    "5": "2d6",
+                    "11": "3d6",
+                    "17": "4d6"
+                }
+            },
+            "damageInflict": [
+                "lightning"
+            ],
+            "spellAttack": [
+                "R"
+            ],
+            "classes": {
+                "fromClassList": [
+                    {
+                        "name": "Shaman",
+                        "source": "Patrick"
+                    }
+                ]
+            }
+        }
+    ],
+    "item": [
+        {
+            "name": "Totem Pouch",
+            "source": "Patrick",
+            "srd": false,
+            "type": "G",
+            "rarity": "none",
+            "weight": 2,
+            "value": 2500,
+            "entries": [
+                "A totem pouch is a small, watertight leather belt pouch that has compartments to hold all that is required for totems."
+            ]
+        },
+        {
+            "name": "Elemental Totem",
+            "source": "Patrick",
+            "srd": false,
+            "type": "G",
+            "rarity": "none",
+            "weight": 2,
+            "value": 2500,
+            "entries": [
+                "An elemental totem. Totes awesome."
+            ]
+        }
+    ]
+}

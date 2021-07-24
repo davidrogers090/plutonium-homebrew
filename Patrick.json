@@ -1102,9 +1102,9 @@
                     "duration": {
                         "type": "hour",
                         "amount": 1
-                    }
-                },
+                    },
                     "concentration": true
+                },
             ],
             "entries": [
                 "Your ancestral spirits grant you sight beyond sight. Choose a point you can see, for the duration of the spell your perspective shifts as if you were standing in that spot. You see, hear, and smell anything you would if you were actually there. You may not move from that spot or interact with the world in any way. Line of sight for the purpose of casting this spell (and most other spells for that matter) is drawn from your character. I.e. you cannot use this spell to alter your line of sight for the purpose of casting other spells."

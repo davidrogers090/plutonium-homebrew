@@ -418,6 +418,7 @@
                     "name": "Earth Shield",
                     "source": "Patrick"
                 },
+                "Expeditious Retreat",
                 "Fog Cloud",
                 "Hellish Rebuke",
                 "Hex",
@@ -425,14 +426,12 @@
                 "Thunderwave",
                 "Darkness",
                 "Enhance Ability",
+                "Hold Person",
                 {
                     "name": "Lava Burst",
                     "source": "Patrick"
                 },
-                {
-                    "name": "Lesser Restoration",
-                    "source": "Patrick"
-                },
+                "Lesser Restoration"
                 "Misty Step",
                 {
                     "name": "Riptide",
@@ -447,23 +446,16 @@
                     "name": "Chain Heal",
                     "source": "Patrick"
                 },
-                {
-                    "name": "Chain Lightning",
-                    "source": "Patrick"
-                },
-                {
-                    "name": "Purge",
-                    "source": "Patrick"
-                },
+                "Fireball",
+                "Fly",
+                "Haste",
+                "Lightning Bolt",
                 "Protection from Energy",
+                "Sleet Storm",
                 "Tongues",
                 "Water Walk",
                 {
-                    "name": "Earthquake",
-                    "source": "Patrick"
-                },
-                {
-                    "name": "Ice Fury",
+                    "name": "Crash Lightning",
                     "source": "Patrick"
                 }
             ],
@@ -844,6 +836,11 @@
             "featureType": [
                 "PG"
             ],
+            "prerequisite": [
+                {
+                    "level": 5
+                }
+            ],
             "entries": [
                 "You can attack with your elemental weapon twice, instead of once, whenever you take the attack action on your turn. Further you may use a bonus action to attack once with disadvantage and you may take a second reaction on your turn though only once per triggering event."
             ]
@@ -856,7 +853,7 @@
                 "PG"
             ],
             "entries": [
-                "You can cast Earth Shield at will, without expending a spell slot or material components."
+                "You can cast {@spell Earth Shield|Patrick} at will, without expending a spell slot or material components."
             ]
         },
         {
@@ -867,7 +864,7 @@
                 "PG"
             ],
             "entries": [
-                "As an action you can surround yourself with crackeling lightning at will. The lightning shield lasts for 1 minute and deals {@damage 1d4} damage to an attacker whether they hit or miss.  This damage increases by {@damage 1d4} for each spell slot level you have above 1st."
+                "As an action you can surround yourself with crackeling lightning at will. The lightning shield lasts for 1 minute and deals {@damage 1d4} damage to an attacker whether they hit or miss.  This damage increases by {@scaledamage 1d4|1-9|1d4} for each spell slot level you have above 1st."
             ]
         },
         {
@@ -1082,18 +1079,17 @@
             "source": "Patrick",
             "srd": false,
             "level": 0,
-            "school": "C",
+            "school": "D",
             "time": [
                 {
                     "number": 1,
-                    "unit": "action"
+                    "unit": "minute"
                 }
             ],
             "range": {
                 "type": "point",
                 "distance": {
-                    "type": "feet",
-                    "amount": 60
+                    "type": "unlimited"
                 }
             },
             "components": {
@@ -1102,27 +1098,16 @@
             },
             "duration": [
                 {
-                    "type": "instant"
-                }
+                    "type": "timed",
+                    "duration": {
+                        "type": "hour",
+                        "amount": 1
+                    }
+                },
+                    "concentration": true
             ],
             "entries": [
-                "Beep.",
-                "Boop."
-            ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
+                "Your ancestral spirits grant you sight beyond sight. Choose a point you can see, for the duration of the spell your perspective shifts as if you were standing in that spot. You see, hear, and smell anything you would if you were actually there. You may not move from that spot or interact with the world in any way. Line of sight for the purpose of casting this spell (and most other spells for that matter) is drawn from your character. I.e. you cannot use this spell to alter your line of sight for the purpose of casting other spells."
             ],
             "classes": {
                 "fromClassList": [
@@ -1138,18 +1123,18 @@
             "source": "Patrick",
             "srd": false,
             "level": 0,
-            "school": "C",
+            "school": "E",
             "time": [
                 {
                     "number": 1,
-                    "unit": "action"
+                    "unit": "bonus"
                 }
             ],
             "range": {
                 "type": "point",
                 "distance": {
                     "type": "feet",
-                    "amount": 60
+                    "amount": 30
                 }
             },
             "components": {
@@ -1162,20 +1147,20 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You blast the target with a sudden gout of flames. Make a ranged spell attack against the target. On a hit, the target takes 1d4 Fire damage and is Marked by Flame for 2 rounds.",
+                "This spell's damage increases by {@dice 1d4} when you reach 5th level ({@damage 2d4}), 11th level ({@damage 3d4}), and 17th level ({@damage 4d4})."
             ],
             "scalingLevelDice": {
-                "label": "lightning damage",
+                "label": "fire damage",
                 "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+                    "1": "1d4",
+                    "5": "2d4",
+                    "11": "3d4",
+                    "17": "4d4"
                 }
             },
             "damageInflict": [
-                "lightning"
+                "fire"
             ],
             "spellAttack": [
                 "R"
@@ -1194,7 +1179,7 @@
             "source": "Patrick",
             "srd": false,
             "level": 0,
-            "school": "C",
+            "school": "E",
             "time": [
                 {
                     "number": 1,
@@ -1205,7 +1190,7 @@
                 "type": "point",
                 "distance": {
                     "type": "feet",
-                    "amount": 60
+                    "amount": 120
                 }
             },
             "components": {
@@ -1218,16 +1203,16 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You fire a bolt of lightning from your hand. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d10} lightning damage.",
+                "This spell's damage increases by {@dice 1d10} when you reach 5th level ({@damage 2d10}), 11th level ({@damage 3d10}), and 17th level ({@damage 4d10})."
             ],
             "scalingLevelDice": {
                 "label": "lightning damage",
                 "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+                    "1": "1d10",
+                    "5": "2d10",
+                    "11": "3d10",
+                    "17": "4d10"
                 }
             },
             "damageInflict": [
@@ -1250,18 +1235,18 @@
             "source": "Patrick",
             "srd": false,
             "level": 1,
-            "school": "C",
+            "school": "E",
             "time": [
                 {
                     "number": 1,
-                    "unit": "action"
+                    "unit": "bonus"
                 }
             ],
             "range": {
                 "type": "point",
                 "distance": {
                     "type": "feet",
-                    "amount": 60
+                    "amount": 30
                 }
             },
             "components": {
@@ -1274,18 +1259,17 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "Make a ranged spell attack against the target. On a hit, the target takes force damage equal to your wisdom modifer and one beneficial spell affecting the target of a lower level than the slot used to cast Earth Shock ends. Further if this damage would cause the target to make a concentration saving throw they automatically fail it. At Higher Levels."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+            "entriesHigherLevel": [
+                {
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 2nd level or higher, the target takes additional force damage equal to your wisdom modifer per slot above 1st."
+                    ]
                 }
-            },
+            ],
             "damageInflict": [
                 "lightning"
             ],
@@ -1306,7 +1290,7 @@
             "source": "Patrick",
             "srd": false,
             "level": 1,
-            "school": "C",
+            "school": "A",
             "time": [
                 {
                     "number": 1,
@@ -1316,8 +1300,7 @@
             "range": {
                 "type": "point",
                 "distance": {
-                    "type": "feet",
-                    "amount": 60
+                    "type": "touch"
                 }
             },
             "components": {
@@ -1326,27 +1309,24 @@
             },
             "duration": [
                 {
-                    "type": "instant"
+                    "type": "timed",
+                    "duration": {
+                        "type": "hour",
+                        "amount": 8
+                    }
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You touch a willing creature and grant them an earthen shield until the spell ends. The target's AC increases by 1 up to a maxium of 20 and they reduce all damage taken by 1. Further when the target spends a hit die to heal, they may add the Shaman's Wisdom Modifier to the amount healed. Casting Earth Shield a second time ends the effect for the first target."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+            "entriesHigherLevel": [
+                {
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 2nd level or higher, the target reduces the damage they take 2 per slot above first."
+                    ]
                 }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
             ],
             "classes": {
                 "fromClassList": [
@@ -1362,7 +1342,7 @@
             "source": "Patrick",
             "srd": false,
             "level": 2,
-            "school": "C",
+            "school": "E",
             "time": [
                 {
                     "number": 1,
@@ -1386,76 +1366,19 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You hurl a sphere of primal magma. Make a ranged spell attack against the target. On a hit, the target takes {@damage 2d12} fire damage. If the target is Marked by Flame Lava burst deals double damage and the mark is consumed."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
-            ],
-            "classes": {
-                "fromClassList": [
-                    {
-                        "name": "Shaman",
-                        "source": "Patrick"
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Ice Fury",
-            "source": "Patrick",
-            "srd": false,
-            "level": 4,
-            "school": "C",
-            "time": [
+            "entriesHigherLevel": [
                 {
-                    "number": 1,
-                    "unit": "action"
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 3rd level or higher, the damage increases by {@scaledamage 2d12|2-9|1d12} fire damage per slot above 2nd. Further if you use a 4th level slot or higher you have advantage against targets Marked by Flame."
+                    ]
                 }
             ],
-            "range": {
-                "type": "point",
-                "distance": {
-                    "type": "feet",
-                    "amount": 60
-                }
-            },
-            "components": {
-                "v": true,
-                "s": true
-            },
-            "duration": [
-                {
-                    "type": "instant"
-                }
-            ],
-            "entries": [
-                "Beep.",
-                "Boop."
-            ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
             "damageInflict": [
-                "lightning"
+                "fire"
             ],
             "spellAttack": [
                 "R"
@@ -1498,23 +1421,19 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You conjure a wave of healing energy that bounces between multiple targets. Choose up to 3 targets within 30 feet of each other. The first heals 30 damage, the second heals {@dice 2d8} + your wisdom modifier, the third heals damage equal to your wisdom modifier."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+            "entriesHigherLevel": [
+                {
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 4th level or higher, the first target heals 8 extra damage per slot above 3rd, the second target heals an extra {@scaledice 2d8|3,5,7,9|1d8} per 2 slots above 3rd, and the third target heals 2 extra damage per slot above 3rd."
+                    ]
                 }
-            },
-            "damageInflict": [
-                "lightning"
             ],
-            "spellAttack": [
-                "R"
+            "miscTags": [
+                "HL"
             ],
             "classes": {
                 "fromClassList": [
@@ -1526,7 +1445,7 @@
             }
         },
         {
-            "name": "Chain Lightning",
+            "name": "Crash Lightning",
             "source": "Patrick",
             "srd": false,
             "level": 3,
@@ -1541,7 +1460,7 @@
                 "type": "point",
                 "distance": {
                     "type": "feet",
-                    "amount": 60
+                    "amount": 120
                 }
             },
             "components": {
@@ -1554,79 +1473,22 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You summon a massive bolt of lightning from the sky and leave the ground it strikes electified. A target you can see must make a dexterity saving throw. The target takes {@damage 8d6} lightning damage on a failed save or half as much on a successful one. Further, a 20-foot-raidus circle of the ground, centered on the point of impact, becomes electrified. Any creature entering into or ending their turn in the area must make a dexteriry saving throw. They take {@damage 3d6} lightning damage on a failed save and half as much on a successful one."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
+            "entriesHigherLevel": [
+                {
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 5th level or higher, the initial damage increases by {@scaledamage 8d6|4-9|2d6} and the secondary damage by 1d6 per slot level above 5th."
+                    ]
                 }
-            },
+            ],
             "damageInflict": [
                 "lightning"
             ],
-            "spellAttack": [
-                "R"
-            ],
-            "classes": {
-                "fromClassList": [
-                    {
-                        "name": "Shaman",
-                        "source": "Patrick"
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Purge",
-            "source": "Patrick",
-            "srd": false,
-            "level": 0,
-            "school": "C",
-            "time": [
-                {
-                    "number": 1,
-                    "unit": "action"
-                }
-            ],
-            "range": {
-                "type": "point",
-                "distance": {
-                    "type": "feet",
-                    "amount": 60
-                }
-            },
-            "components": {
-                "v": true,
-                "s": true
-            },
-            "duration": [
-                {
-                    "type": "instant"
-                }
-            ],
-            "entries": [
-                "Beep.",
-                "Boop."
-            ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
+            "savingThrow": [
+                "dexterity"
             ],
             "classes": {
                 "fromClassList": [
@@ -1646,15 +1508,11 @@
             "time": [
                 {
                     "number": 1,
-                    "unit": "action"
+                    "unit": "bonus"
                 }
             ],
             "range": {
-                "type": "point",
-                "distance": {
-                    "type": "feet",
-                    "amount": 60
-                }
+                "type": "touch"
             },
             "components": {
                 "v": true,
@@ -1666,79 +1524,16 @@
                 }
             ],
             "entries": [
-                "Beep.",
-                "Boop."
+                "You conjure elemental water to sooth your allies hurts. A creature you touch heals damage equal to your Wisdom modifer and gains regeneration 4 for 3 rounds."
             ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
-            ],
-            "classes": {
-                "fromClassList": [
-                    {
-                        "name": "Shaman",
-                        "source": "Patrick"
-                    }
-                ]
-            }
-        },
-        {
-            "name": "Earthquake",
-            "source": "Patrick",
-            "srd": false,
-            "level": 4,
-            "school": "C",
-            "time": [
+            "entriesHigherLevel": [
                 {
-                    "number": 1,
-                    "unit": "action"
+                    "type": "entries",
+                    "name": "At Higher Levels",
+                    "entries": [
+                        "When you cast this spell using a spell slot of 3rd level or higher, the target gains additional regeneration of 2 for every spell slot above 2nd level. If you use a slot higher than 3rd level Riptide gains a range of 30ft."
+                    ]
                 }
-            ],
-            "range": {
-                "type": "point",
-                "distance": {
-                    "type": "feet",
-                    "amount": 60
-                }
-            },
-            "components": {
-                "v": true,
-                "s": true
-            },
-            "duration": [
-                {
-                    "type": "instant"
-                }
-            ],
-            "entries": [
-                "Beep.",
-                "Boop."
-            ],
-            "scalingLevelDice": {
-                "label": "lightning damage",
-                "scaling": {
-                    "1": "1d6",
-                    "5": "2d6",
-                    "11": "3d6",
-                    "17": "4d6"
-                }
-            },
-            "damageInflict": [
-                "lightning"
-            ],
-            "spellAttack": [
-                "R"
             ],
             "classes": {
                 "fromClassList": [

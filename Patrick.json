@@ -1071,6 +1071,28 @@
             "entries": [
                 "As a reaction, you can have your {@optionalFeature lightning shield|Patrick} deal its damage to one target within 5ft of you."
             ]
+        },
+        {
+            "name": "Fire Lord",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "When you consume Marked by Flame the target takes damage as if they had been hit by your {@spell flame shock|Patrick}. Further if Marked by Flame ever expires without being consumed or you critically strike with Flame Shock, you may use your reaction to cast {@spell lava burst|Patrick} without expending a spell slot. Further, when you do fire, lightning, cold, or force damage to a marked target, you may consume the mark."
+            ]
+        },
+        {
+            "name": "Conflagration",
+            "source": "Patrick",
+            "srd": false,
+            "featureType": [
+                "PG"
+            ],
+            "entries": [
+                "Once per round when a target is Marked by Flame each enemy within 15 feet must succeed a dexterity saving throw against your spell DC or also be Marked by Flame as their mark erupts in flame."
+            ]
         }
     ],
     "spell": [

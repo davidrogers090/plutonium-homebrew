@@ -95,7 +95,7 @@
             "optionalfeatureProgression": [
                 {
                     "name": "Primal Gifts",
-                    "featureType": "PG",
+                    "featureType": ["PG"],
                     "progression": [
                         0,
                         2,
